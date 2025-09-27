@@ -30,10 +30,9 @@ const Navber = () => {
         <nav className="bg-opacity-25 md:fixed w-full z-50 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] p-4">
             <div className="container mx-auto flex items-center justify-between">
                 {/* Left: Logo */}
-                <div className="text-blue-950 text-sm font-bold cursor-pointer">
-                    Rafiq <span className='text-teal-600'>Ibn</span> Zaman
+                <div className="text-teal-400  font-extrabold cursor-pointer">
+                    Rafiq <span className='text-yellow-50'>Ibn</span> Zaman
                 </div>
-
                 {/* Center: Links */}
                 <ul className="hidden md:flex items-center gap-6 text-white">
                     <li>
@@ -128,7 +127,7 @@ const Navber = () => {
             {/* Bottom Navigation for Small Screens */}
             <div className="fixed bottom-3 left-1/2 -translate-x-1/2 z-50 md:hidden">
                 {/* Gradient Border */}
-                <div className="p-[3px] rounded-full bg-gradient-to-r from-pink-50 via-teal-300 to-red-500 animate-gradient">
+                <div className="p-[3px] rounded-full bg-gradient-to-r from-pink-50 via-teal-300 to-lime-300 animate-gradient">
                     {/* Inner Navbar */}
                     <div className="rounded-full bg-slate-900 bg-opacity-80 backdrop-blur-md shadow-lg">
                         <ul className="flex justify-around items-center w-[320px] h-10 px-4">

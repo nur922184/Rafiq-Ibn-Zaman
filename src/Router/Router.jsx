@@ -1,6 +1,7 @@
 import React from 'react';
 import Navber from '../Component/Navber/Navber';
 import Hero from '../Pages/Hero/Hero';
+import Contact from '../Pages/Contact/Contact';
 
 const Router = () => {
     return (
@@ -10,13 +11,13 @@ const Router = () => {
             {/* <section id="home" name="home" ><AboutMe></AboutMe></section> */}
             {/* <ContactMe></ContactMe>
             <SkillsSection></SkillsSection> */}
-            {/* <section id="education" name="education" ><EducationSection></EducationSection></section>
-            <section id="about" name="about" ><ContactSection></ContactSection></section>
-            <section id="blog" name="blog" ><BlogSection></BlogSection></section>
-            <section id="resume" name="resume" ><ResumeSection></ResumeSection></section>
-            <section id="dev" name="dev" >  <DeveloperContactSection></DeveloperContactSection></section> */}
+            {/* <section id="education" name="education" ><EducationSection></EducationSection></section> */}
+            <section id="about" name="about" ><Contact></Contact></section>
+            {/* <section id="blog" name="blog" ><BlogSection></BlogSection></section> */}
+            {/* <section id="resume" name="resume" ><ResumeSection></ResumeSection></section> */}
+            {/* <section id="dev" name="dev" >  <DeveloperContactSection></DeveloperContactSection></section>  */}
 
-            {/* <Footer></Footer> */}
+            {/* {/* <Footer></Footer> */}
         </div>
     );
 };
