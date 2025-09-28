@@ -9,6 +9,7 @@ import SocialMedia from '../Pages/Contact/SocialMedia';
 import Footer from '../Component/Footer/Footer';
 import Education from '../Pages/Education/Education';
 import Works from '../Pages/Works/Works';
+import Resume from '../Pages/Resume/Resume';
 
 const Router = () => {
     return (
@@ -25,7 +26,7 @@ const Router = () => {
             <section id="work" name="work" > <Works></Works></section>
            
             <section id="blog" name="blog" ><Blog></Blog></section>
-            {/* <section id="resume" name="resume" ><ResumeSection></ResumeSection></section> */}
+            <section id="resume" name="resume" ><Resume></Resume></section>
             {/* <section id="dev" name="dev" >  <DeveloperContactSection></DeveloperContactSection></section>  */}
 
             <Footer></Footer>
