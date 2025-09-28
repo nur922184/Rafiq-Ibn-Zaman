@@ -161,7 +161,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                Creative <span className="text-teal-400">WordPress Developer</span> & Web Solutions Expert
+                                A Passionate  <span className="text-teal-400">Frontend Developer</span> & Web Solutions Expert
                             </motion.h3>
 
                             <motion.p
@@ -170,7 +170,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
                             >
-                                A passionate WordPress Developer specializing in building dynamic, user-friendly,
+                                A passionate Frontend Developer specializing in building dynamic, user-friendly,
                                 and SEO-optimized websites. With expertise in theme customization, plugin integration,
                                 and responsive design, I help businesses grow with professional web solutions.
                             </motion.p>

@@ -18,17 +18,13 @@ const Router = () => {
             <section id="home" name="home" ><Hero></Hero></section>
             <section id="home" name="home" ><AboutMe></AboutMe></section>
             <Skills></Skills>
-            {/* <ContactMe></ContactMe>
-            <SkillsSection></SkillsSection> */}
             <section id="education" name="education" ><Education></Education></section>
             <SocialMedia></SocialMedia>
             <section id="about" name="about" ><Contact></Contact></section>
             <section id="work" name="work" > <Works></Works></section>
-           
             <section id="blog" name="blog" ><Blog></Blog></section>
             <section id="resume" name="resume" ><Resume></Resume></section>
-            {/* <section id="dev" name="dev" >  <DeveloperContactSection></DeveloperContactSection></section>  */}
-
+            
             <Footer></Footer>
         </div>
     );
