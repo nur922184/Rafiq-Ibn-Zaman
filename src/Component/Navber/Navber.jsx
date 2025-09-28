@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
-import { FaBook, FaBriefcase,  FaHome, FaUser } from 'react-icons/fa';
+import { FaBook, FaBriefcase, FaGraduationCap, FaHome, FaPen, FaUser } from 'react-icons/fa';
 import { MdContactPhone } from 'react-icons/md';
 import { Link } from 'react-scroll'; // ✅ react-scroll import
 
@@ -63,6 +63,19 @@ const Navber = () => {
                     </li>
                     <li>
                         <Link
+                            to="work"
+                            smooth={true}
+                            duration={500}
+                            spy={true}
+                            offset={-80}
+                            activeClass="text-teal-400 border-b-2 border-teal-400"
+                            className="flex items-center gap-2 cursor-pointer hover:text-teal-400 border-b-2 border-transparent hover:border-teal-400 transition"
+                        >
+                            <FaBriefcase /> Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
                             to="education"
                             smooth={true}
                             duration={500}
@@ -71,7 +84,7 @@ const Navber = () => {
                             activeClass="text-teal-400 border-b-2 border-teal-400"
                             className="flex items-center gap-2 cursor-pointer hover:text-teal-400 border-b-2 border-transparent hover:border-teal-400 transition"
                         >
-                            <FaBriefcase /> Education
+                            <FaGraduationCap /> Education
                         </Link>
                     </li>
                     <li>
@@ -159,6 +172,19 @@ const Navber = () => {
                             </li>
                             <li>
                                 <Link
+                                    to="work"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    offset={-80}
+                                    activeClass="text-teal-400"
+                                    className="cursor-pointer text-white hover:text-teal-400 transition"
+                                >
+                                    <FaBriefcase size={16} />
+                                </Link>
+                            </li>
+                            <li>
+                                <Link
                                     to="education"
                                     smooth={true}
                                     duration={500}
@@ -167,7 +193,7 @@ const Navber = () => {
                                     activeClass="text-teal-400"
                                     className="cursor-pointer text-white hover:text-teal-400 transition"
                                 >
-                                    <FaBriefcase size={15} />
+                                    <FaGraduationCap size={18} />
                                 </Link>
                             </li>
                             <li>

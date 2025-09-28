@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Economics from "../../assets/profile.jpg";
-import Data_Analysis from "../../assets/profile.jpg";
-import Policy from "../../assets/profile.jpg";
+import Economics from "../../image/blog1.jpeg";
+import Data_Analysis from "../../image/blog2.jpeg";
+import Policy from "../../image/blog3.jpeg";
 import { Calendar, User, Clock, ArrowRight, BookOpen, Heart, MessageCircle, Share } from 'lucide-react';
 
 const Blog = () => {
