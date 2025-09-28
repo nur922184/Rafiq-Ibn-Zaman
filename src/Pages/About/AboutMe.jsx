@@ -15,7 +15,7 @@ const AboutMe = () => {
                         About Me
                     </h2>
                     <p className="text-gray-300 leading-relaxed">
-                        Hello! I’m Rafiq Ibn Zaman, a dedicated WordPress Developer with a strong focus on creating functional and visually appealing websites. From custom themes to plugin development, I deliver solutions that are secure, responsive, and tailored to client needs. My goal is to blend creativity with technical expertise
+                        Hello! I’m Rafiq Ibn Zaman, a dedicated  Frontend  Developer with a strong focus on creating functional and visually appealing websites. From custom themes to plugin development, I deliver solutions that are secure, responsive, and tailored to client needs. My goal is to blend creativity with technical expertise
                         <span className="text-teal-400 font-semibold"> to build web platforms that drive engagement and success. </span>
                         I’m passionate about turning ideas into digital  <span className="text-teal-400 font-semibold">  experiences that truly make an impact.</span>।
                     </p>

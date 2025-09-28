@@ -36,7 +36,7 @@ const Contact = () => {
     e.preventDefault();
 
     const formDataToSend = new FormData();
-    formDataToSend.append("access_key", "a9b6bb6c-f178-437d-a90a-f26a96a2c11d");
+    formDataToSend.append("access_key", "8dd75713-e108-459b-9277-3c713e36a2af");
     formDataToSend.append("name", formData.name);
     formDataToSend.append("email", formData.email);
     formDataToSend.append("message", formData.message);
