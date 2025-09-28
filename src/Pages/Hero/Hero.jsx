@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import profile from '../../assets/profile.png'
 import { ShieldCheck, Download, Mail, Code, Star, Zap } from 'lucide-react';
 
 const Hero = () => {
@@ -80,7 +81,7 @@ const Hero = () => {
                             {/* Image Container */}
                             <div className="relative mx-auto w-[80%] rounded-3xl p-2 bg-gradient-to-br from-gray-800 to-gray-900 shadow-2xl transform group-hover:scale-105 transition duration-500 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80"
+                                    src={profile}
                                     alt="Rafiq Ibn Zaman - WordPress Developer"
                                     className="rounded-2xl w-full max-w-md object-cover grayscale group-hover:grayscale-0 transition duration-500"
                                 />
