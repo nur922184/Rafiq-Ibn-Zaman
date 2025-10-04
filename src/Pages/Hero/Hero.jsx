@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import profile from '../../assets/profile.png'
+import profile from '../../assets/profile.jpg'
 import { ShieldCheck, Download, Mail, Code, Star, Zap } from 'lucide-react';
 import { Link } from 'react-scroll';
 
@@ -161,7 +161,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                A Passionate  <span className="text-teal-400">Frontend Developer</span> & Web Solutions Expert
+                                 <span className="text-teal-400">Front-End Developer</span> & SEO Strategist
                             </motion.h3>
 
                             <motion.p

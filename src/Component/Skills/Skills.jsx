@@ -17,6 +17,7 @@ const softSkills = [
   { name: "Leadership", icon: <FaTasks className="text-pink-500 text-xl" /> },
   { name: "Problem Solving", icon: <FaLightbulb className="text-yellow-500 text-xl" /> },
 ];
+// Key SEO strategist skills include keyword research, technical SEO, on-page and off-page optimization, data analysis, content creation, and proficiency with SEO tools like Google Analytics and SEMrush
 
 const Skills = () => {
   return (
