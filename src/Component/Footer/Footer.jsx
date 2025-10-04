@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <h3 className="text-xl font-bold mb-4">Rafiq Ibn Zaman</h3>
-            <p className="text-gray-400">portend Developer</p>
+            <p className="text-gray-400">Front-End Developer</p>
             <p className="text-gray-400 mt-2">Expert in Web Development</p>
           </div>
           

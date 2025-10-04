@@ -1,6 +1,7 @@
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaUsers, FaLightbulb, FaTasks } from "react-icons/fa";
 import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import SEOSkills from "./SEOSkills";
 
 const skills = [
   { name: "HTML5", level: 95, icon: <FaHtml5 className="text-orange-500 text-2xl" /> },
@@ -48,7 +49,7 @@ const Skills = () => {
             ))}
           </div>
         </div>
-
+            <SEOSkills></SEOSkills>
         {/* Soft Skills */}
         <div>
           <h3 className="text-2xl font-semibold text-teal-300 mb-8 text-center">Soft Skills</h3>
