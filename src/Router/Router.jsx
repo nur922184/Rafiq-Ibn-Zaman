@@ -7,7 +7,7 @@ import Skills from '../Component/Skills/Skills';
 import Blog from '../Pages/Blog/Blog';
 import SocialMedia from '../Pages/Contact/SocialMedia';
 import Footer from '../Component/Footer/Footer';
-import Education from '../Pages/Education/Education';
+// import Education from '../Pages/Education/Education';
 import Works from '../Pages/Works/Works';
 import Resume from '../Pages/Resume/Resume';
 
@@ -17,8 +17,9 @@ const Router = () => {
             <Navber></Navber>
             <section id="home" name="home" ><Hero></Hero></section>
             <section id="home" name="home" ><AboutMe></AboutMe></section>
-            <Skills></Skills>
-            <section id="education" name="education" ><Education></Education></section>
+           
+            {/* <section id="education" name="education" ><Education></Education></section> */}
+            <section id="skills" name="skills" > <Skills></Skills></section>
             <SocialMedia></SocialMedia>
             <section id="about" name="about" ><Contact></Contact></section>
             <section id="work" name="work" > <Works></Works></section>

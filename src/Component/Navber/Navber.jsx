@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
-import { FaBook, FaBriefcase, FaGraduationCap, FaHome, FaPen, FaUser } from 'react-icons/fa';
+import { FaBook, FaBriefcase, FaGraduationCap, FaHome, FaPen, FaSkiing, FaUser } from 'react-icons/fa';
 import { MdContactPhone } from 'react-icons/md';
 import { Link } from 'react-scroll'; // ✅ react-scroll import
 
@@ -76,7 +76,7 @@ const Navber = () => {
                     </li>
                     <li>
                         <Link
-                            to="education"
+                            to="skills"
                             smooth={true}
                             duration={500}
                             spy={true}
@@ -84,7 +84,7 @@ const Navber = () => {
                             activeClass="text-teal-400 border-b-2 border-teal-400"
                             className="flex items-center gap-2 cursor-pointer hover:text-teal-400 border-b-2 border-transparent hover:border-teal-400 transition"
                         >
-                            <FaGraduationCap /> Education
+                            <FaSkiing /> skills
                         </Link>
                     </li>
                     <li>
@@ -185,7 +185,7 @@ const Navber = () => {
                             </li>
                             <li>
                                 <Link
-                                    to="education"
+                                    to="skills"
                                     smooth={true}
                                     duration={500}
                                     spy={true}
@@ -193,7 +193,7 @@ const Navber = () => {
                                     activeClass="text-teal-400"
                                     className="cursor-pointer text-white hover:text-teal-400 transition"
                                 >
-                                    <FaGraduationCap size={18} />
+                                    <FaSkiing size={18} />
                                 </Link>
                             </li>
                             <li>
