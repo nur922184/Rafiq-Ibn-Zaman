@@ -1,5 +1,5 @@
 import React from 'react';
-import Aboutme from "../../assets/profile1.png";
+import Aboutme from "../../assets/rafiq.jpg";
 import { ShieldCheck, Award, Heart } from "lucide-react";
 const AboutMe = () => {
     return (
