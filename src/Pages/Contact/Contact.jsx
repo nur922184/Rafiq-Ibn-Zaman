@@ -101,7 +101,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium">Location</h4>
-                  <p className="text-gray-200">3/A/2 Salimullah Road, Block - D, Mohammadpur, Dhaka - 1207</p>
+                  <p className="text-gray-200">Chattogram, Bangladesh</p>
                 </div>
               </div>
 

@@ -23,7 +23,7 @@ const Resume = () => {
           </h2>
           <div className="w-20 h-1 bg-teal-400 mx-auto"></div>
           <p className="text-gray-200 mt-4 max-w-2xl mx-auto">
-            Download my resume to learn more about my skills and experience
+            Download my resume to learn more about my skills and experiences
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ const Resume = () => {
 
             <div className="bg-teal-900/30 p-4 rounded-lg">
               <p className="text-teal-300 text-sm text-center">
-                Click "View Resume" to see the complete document with detailed information about my skills, experience, and projects.
+                Click "View Resume" to see the complete document with detailed information about my skills, experiences, and projects.
               </p>
             </div>
           </div>

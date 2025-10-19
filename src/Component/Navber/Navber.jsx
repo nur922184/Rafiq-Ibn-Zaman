@@ -84,7 +84,7 @@ const Navber = () => {
                             activeClass="text-teal-400 border-b-2 border-teal-400"
                             className="flex items-center gap-2 cursor-pointer hover:text-teal-400 border-b-2 border-transparent hover:border-teal-400 transition"
                         >
-                            <FaSkiing /> skills
+                         <FaSkiing /> Skills
                         </Link>
                     </li>
                     <li>

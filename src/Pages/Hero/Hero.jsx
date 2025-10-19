@@ -170,9 +170,9 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
                             >
-                                A passionate Frontend Developer specializing in building dynamic, user-friendly,
+                                A passionate Front-end Developer specializing in building dynamic, user-friendly,
                                 and SEO-optimized websites. With expertise in theme customization, plugin integration,
-                                and responsive design, I help businesses grow with professional web solutions.
+                                and responsive design. I help businesses to grow with professional web solutions.
                             </motion.p>
 
                             {/* Stats */}

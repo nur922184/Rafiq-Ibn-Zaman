@@ -74,7 +74,7 @@ const SEOSkills = () => {
           </h2>
           <div className="w-24 h-1 bg-yellow-400 mx-auto mb-4"></div>
           <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto">
-            Comprehensive SEO expertise driving organic growth and digital visibility through data-driven strategies
+            Comprehensive SEO expertize driving organic growth and digital visibility through data-driven strategies
           </p>
         </motion.div>
 
