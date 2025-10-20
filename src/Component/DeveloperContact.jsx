@@ -3,14 +3,13 @@ import { FaGithub, FaLinkedin, FaTwitter, FaFacebook, FaYoutube, FaEnvelope, FaW
 
 const DeveloperContact = () => {
   const contacts = [
-    { icon: <FaGithub className="text-lg" />, name: "GitHub", url: "https://github.com/nur922184", color: "from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700" },
-    { icon: <FaLinkedin className="text-lg" />, name: "LinkedIn", url: "https://www.linkedin.com/in/md-moniruzzaman-tonoy-7bb52b285/", color: "from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600" },
-    { icon: <FaTwitter className="text-lg" />, name: "Twitter", url: "https://x.com/moniruzzaman_24", color: "from-blue-400 to-blue-500 hover:from-blue-300 hover:to-blue-400" },
-    { icon: <FaFacebook className="text-lg" />, name: "Facebook", url: "https://www.facebook.com/md.moniruzzaman.tonoy", color: "from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500" },
-    { icon: <FaYoutube className="text-lg" />, name: "YouTube", url: "https://www.youtube.com/@moniruzzamam2428", color: "from-red-500 to-red-600 hover:from-red-400 hover:to-red-500" },
-    { icon: <FaEnvelope className="text-lg" />, name: "Email", url: "mailto:moniruzzaman2428@gmail.com", color: "from-red-400 to-red-500 hover:from-red-300 hover:to-red-400" },
-    { icon: <FaWhatsapp className="text-lg" />, name: "WhatsApp", url: "https://wa.me/8801618160869?text=Hello%20Moniruzzaman,%20I%20want%20to%20connect%20with%20you.", color: "from-green-500 to-green-600 hover:from-green-400 hover:to-green-500" },
-    { icon: <FaPhone className="text-lg" />, name: "Phone", url: "tel:+8801618160869", color: "from-green-600 to-green-700 hover:from-green-500 hover:to-green-600" },
+    { icon: <FaGithub className="text-lg" />, name: "GitHub", url: "https://github.com/ibnzaman", color: "from-gray-700 to-gray-800 hover:from-gray-600 hover:to-gray-700" },
+    { icon: <FaLinkedin className="text-lg" />, name: "LinkedIn", url: "https://linkedin.com/in/rafiqibnzaman", color: "from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600" },
+    { icon: <FaTwitter className="text-lg" />, name: "Twitter", url: "https://x.com/RafiqZ59139", color: "from-blue-400 to-blue-500 hover:from-blue-300 hover:to-blue-400" },
+    { icon: <FaFacebook className="text-lg" />, name: "Facebook", url: "https://facebook.com/rafiq.me", color: "from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500" },
+    { icon: <FaEnvelope className="text-lg" />, name: "Email", url: "mailto:rafiqibnzaman@gmail.com", color: "from-red-400 to-red-500 hover:from-red-300 hover:to-red-400" },
+    { icon: <FaWhatsapp className="text-lg" />, name: "WhatsApp", url: "https://wa.me/8801720548467?text=Hello%20Rafiq,%20I%20want%20to%20connect%20with%20you.", color: "from-green-500 to-green-600 hover:from-green-400 hover:to-green-500" },
+    { icon: <FaPhone className="text-lg" />, name: "Phone", url: "tel:+8801720548467", color: "from-green-600 to-green-700 hover:from-green-500 hover:to-green-600" },
   ];
 
   return (
@@ -26,7 +25,7 @@ const DeveloperContact = () => {
             <h2 className="text-2xl font-bold">Developer Contact</h2>
           </div>
           <p className="text-sm text-gray-300">
-            Developed by <span className="font-semibold text-cyan-300">Md Moniruzzaman Tonoy</span>
+            Developed by <span className="font-semibold text-cyan-300">Rafiq Ibn Zaman</span>
           </p>
         </div>
 
@@ -66,7 +65,7 @@ const DeveloperContact = () => {
         <div className="text-center mt-6">
           <div className="bg-white bg-opacity-5 backdrop-blur-sm rounded-xl p-4 max-w-2xl mx-auto">
             <p className="text-xs text-gray-300 mb-2">
-              Full Stack Developer • React • Node.js • MongoDB
+             Front-End Developer & SEO Strategist | • React • Node.js 
             </p>
             <div className="flex justify-center gap-4 text-xs">
               <span className="text-cyan-400">Frontend</span>
