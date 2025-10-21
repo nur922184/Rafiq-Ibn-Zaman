@@ -58,8 +58,8 @@ const Blog = () => {
   };
 
   return (
-    <section id="blog" className="bg-gradient-to-r from-[#BBD2C5] via-[#536976] to-[#536976] py-20 px-4">
-      <div className="container mx-auto max-w-6xl">
+    <section id="blog" className="bg-gradient-to-r from-[#BBD2C5] via-[#536976] to-[#536976] py-20">
+      <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <div className="mb-2 mt-2">
             <hr className="h-1 border-0 bg-gradient-to-r from-teal-50 from-50% to-transparent to-50%" />
