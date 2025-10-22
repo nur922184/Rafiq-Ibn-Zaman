@@ -161,7 +161,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                 <span className="text-teal-400">Front-End Developer</span> & SEO Strategist
+                                 <span className="text-teal-400">Full Stack Developer</span> & SEO Strategist
                             </motion.h3>
 
                             <motion.p
@@ -170,7 +170,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
                             >
-                                A passionate Front-end Developer specializing in building dynamic, user-friendly,
+                                A passionate 'Full Stack Developer' specializing in building dynamic, user-friendly,
                                 and SEO-optimized websites. With expertise in theme customization, plugin integration,
                                 and responsive design. I help businesses to grow with professional web solutions.
                             </motion.p>
