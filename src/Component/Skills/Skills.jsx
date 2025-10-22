@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaUsers, FaLightbulb, FaTasks } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss } from "react-icons/si";
+import { SiExpress, SiMongodb, SiTailwindcss } from "react-icons/si";
 import SEOSkills from "./SEOSkills";
 
 const skills = [
@@ -11,6 +11,7 @@ const skills = [
   { name: "Node.js", level: 75, icon: <FaNodeJs className="text-green-500 text-2xl" /> },
   { name: "MongoDB", level: 70, icon: <SiMongodb className="text-green-600 text-2xl" /> },
   { name: "Tailwind CSS", level: 85, icon: <SiTailwindcss className="text-sky-400 text-2xl" /> },
+  { name: "Express.js", level: 75, icon: <SiExpress className="text-sky-400 text-2xl" /> },
 ];
 
 const softSkills = [
