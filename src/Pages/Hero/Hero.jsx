@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import profile from '../../assets/profile.jpg'
 import { ShieldCheck, Download, Mail, Code, Star, Zap } from 'lucide-react';
 import { Link } from 'react-scroll';
+import TypeAnimation from './TypeAnimation';
 
 const Hero = () => {
     const textRef = useRef(null);
@@ -156,12 +157,12 @@ const Hero = () => {
                             </div>
 
                             <motion.h3
-                                className="text-xl lg:text-2xl text-gray-300 font-medium mb-6"
+                                className="text-2xl lg:text-3xl text-gray-300 font-medium mb-6"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}
                             >
-                                 <span className="text-teal-400">Full Stack Developer</span> & SEO Strategist
+                                 <TypeAnimation></TypeAnimation>
                             </motion.h3>
 
                             <motion.p
@@ -170,9 +171,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
                             >
-                                A passionate 'Full Stack Developer' specializing in building dynamic, user-friendly,
-                                and SEO-optimized websites. With expertise in theme customization, plugin integration,
-                                and responsive design. I help businesses to grow with professional web solutions.
+                                A passionate with experience in WordPress and Search Engine Optimization. I can expand your web presence and business using my works like customization, plugin integration and responsiveness. I also can help you on On-page SEO , Off-page SEO, Technical SEO and E-commerce SEO using my skills and expertise.
                             </motion.p>
 
                             {/* Stats */}
@@ -237,7 +236,6 @@ const Hero = () => {
                     transition={{ delay: 1.5 }}
                 >
                     <div className="flex flex-col items-center text-gray-400">
-                        <span className="text-sm mb-2">Scroll Down</span>
                         <div className="w-6 h-10 border-2 border-teal-400 rounded-full flex justify-center">
                             <motion.div
                                 className="w-1 h-3 bg-teal-400 rounded-full mt-2"

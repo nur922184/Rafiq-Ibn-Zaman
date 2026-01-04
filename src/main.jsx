@@ -6,6 +6,6 @@ import Router from './Router/Router'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-  <Router></Router>
+  <Router  className="font-yanone "></Router>
   </StrictMode>,
 )

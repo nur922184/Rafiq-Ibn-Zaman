@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
+import {
   FaGoogle,
 } from "react-icons/fa";
 
 const SEOSkills = () => {
- 
+
 
   const tools = [
     { name: "Google Analytics", proficiency: "95%" },
@@ -14,7 +14,7 @@ const SEOSkills = () => {
     { name: "Ahrefs", proficiency: "85%" },
     { name: "Screaming Frog", proficiency: "88%" },
     { name: "Moz Pro", proficiency: "82%" },
-   
+
   ];
 
   const containerVariants = {
@@ -52,94 +52,110 @@ const SEOSkills = () => {
   };
 
   return (
-    <section id="seo-skills" className="py-16 px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
-      <div className="container mx-auto max-w-7xl">
-        {/* Title Section */}
+    <section id="seo-skills" className=" px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
+      <div className="container mx-auto max-w-7xl py-20">
+
+        {/* Header */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+          className="text-center mb-20"
         >
-          <motion.div
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6"
-          >
-            <FaGoogle className="text-white text-3xl" />
-          </motion.div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            SEO <span className="text-yellow-300">Skills</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            SEO <span className="text-yellow-400">Expertise</span>
           </h2>
-          <div className="w-24 h-1 bg-yellow-400 mx-auto mb-4"></div>
-          <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto">
-            Comprehensive SEO expertize driving organic growth and digital visibility through data-driven strategies
+          <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
+            Structured, scalable, and data-driven SEO strategies focused on long-term growth
           </p>
         </motion.div>
 
+        {/* SEO Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-        {/* Tools Proficiency Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-          className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/10 shadow-xl mb-12"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-8">SEO Tools Proficiency</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {tools.map((tool, index) => (
-              <motion.div
-                key={tool.name}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 + 0.7 }}
-                className="bg-white/5 rounded-lg p-4 border border-white/5 hover:border-white/10 transition-all duration-300"
-              >
-                <div className="flex justify-between items-center mb-2">
-                  <span className="text-white font-semibold">{tool.name}</span>
-                  <span className="text-yellow-300 font-bold">{tool.proficiency}</span>
-                </div>
-                <div className="w-full bg-white/10 rounded-full h-3">
-                  <motion.div
-                    custom={tool.proficiency}
-                    variants={progressVariants}
-                    initial="hidden"
-                    animate="visible"
-                    className="bg-gradient-to-r from-yellow-400 to-orange-500 h-3 rounded-full shadow-lg"
-                  ></motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Key Achievements */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
           {[
-            { number: "50+", text: "SEO Projects Completed" },
-            { number: "300%", text: "Average Traffic Growth" },
-            { number: "24/7", text: "Performance Monitoring" }
-          ].map((item, index) => (
+            {
+              title: "On-Page SEO",
+              items: ["Keyword Research", "Content Optimization", "Internal Linking"],
+              value: "95%"
+            },
+            {
+              title: "Technical SEO",
+              items: ["Site Speed", "Core Web Vitals", "Indexing"],
+              value: "90%"
+            },
+            {
+              title: "Off-Page SEO",
+              items: ["Backlink Building", "Authority Growth", "Outreach"],
+              value: "85%"
+            },
+            {
+              title: "SEO Analytics",
+              items: ["GA4", "Search Console", "Conversion Tracking"],
+              value: "92%"
+            }
+          ].map((pillar, index) => (
             <motion.div
               key={index}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.15 }}
+              viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="bg-white/10 backdrop-blur-md rounded-xl p-6 text-center border border-white/10 shadow-lg"
+              className="bg-gradient-to-b from-white/10 to-white/5 
+        backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl"
             >
-              <div className="text-3xl font-bold text-yellow-300 mb-2">{item.number}</div>
-              <div className="text-white font-semibold">{item.text}</div>
+
+              {/* Percentage */}
+              <div className="text-right text-yellow-400 font-bold text-2xl">
+                {pillar.value}
+              </div>
+
+              <h3 className="text-xl font-semibold text-white mb-4">
+                {pillar.title}
+              </h3>
+
+              <ul className="space-y-2 text-gray-300 text-sm">
+                {pillar.items.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2">
+                    <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </motion.div>
+          ))}
+        </div>
+
+        {/* Impact Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          {[
+            { number: "50+", label: "Websites Ranked" },
+            { number: "3x", label: "Organic Growth" },
+            { number: "Top 10", label: "SERP Results" }
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className="bg-white/10 border border-white/10 rounded-xl p-8 text-center"
+            >
+              <div className="text-3xl font-bold text-yellow-400">
+                {stat.number}
+              </div>
+              <p className="text-gray-300 mt-2">
+                {stat.label}
+              </p>
+            </div>
           ))}
         </motion.div>
 
-    
       </div>
+
     </section>
   );
 };

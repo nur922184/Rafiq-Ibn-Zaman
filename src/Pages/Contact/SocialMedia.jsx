@@ -4,16 +4,11 @@ import {
   FaGithub,
   FaLinkedin,
   FaFacebook,
-  FaYoutube,
   FaEnvelope,
-  FaPhone,
   FaWhatsapp,
-  FaPaperPlane,
-  FaMapMarkerAlt,
-  FaUser,
   FaTwitter,
   FaInstagram,
-  FaGlobe
+
 } from "react-icons/fa";
 
 const SocialMedia = () => {
@@ -75,7 +70,7 @@ const SocialMedia = () => {
       hoverColor: "hover:from-red-400 hover:to-red-600",
       textColor: "text-red-100"
     },
-   
+
   ];
 
   const containerVariants = {
@@ -100,92 +95,84 @@ const SocialMedia = () => {
   };
 
   return (
-    <section id="social-media" className="py-16 px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
-      <div className="container mx-auto max-w-6xl">
-        {/* Title Section */}
+    <section id="social-media" className=" px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
+      <div className="container mx-auto max-w-6xl ">
+
+        {/* Title */}
         <motion.div
-          className="text-center mb-16"
-          initial={{ opacity: 0, y: -30 }}
+          initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
+          className="text-center mb-20"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-            Social <span className="text-teal-300">Media</span>
+          <h2 className="text-5xl md:text-6xl font-bold text-white">
+            Connect <span className="text-teal-400">With Me</span>
           </h2>
-          <div className="w-24 h-1 bg-teal-400 mx-auto mb-4"></div>
-          <p className="text-gray-200 text-lg md:text-xl max-w-3xl mx-auto">
-            Connect with me on various social media platforms. Let's stay in touch and collaborate!
+          <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg">
+            Let’s build, collaborate, and grow together across digital platforms
           </p>
         </motion.div>
 
-        {/* Social Media Grid */}
+        {/* Floating Social Icons */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-          variants={containerVariants}
           initial="hidden"
           animate="visible"
+          variants={containerVariants}
+          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-7 gap-10 place-items-center"
         >
           {socialLinks.map((social, index) => (
             <motion.a
-              key={social.name}
+              key={index}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
               variants={itemVariants}
-              whileHover={{ 
-                scale: 1.05, 
-                y: -5,
-                transition: { duration: 0.2 }
-              }}
+              whileHover={{ scale: 1.15, rotate: 3 }}
               whileTap={{ scale: 0.95 }}
-              className={`bg-gradient-to-r ${social.color} ${social.hoverColor} rounded-2xl p-6 shadow-2xl border border-white/10 backdrop-blur-sm transition-all duration-300 group cursor-pointer`}
+              className="group relative"
             >
-              <div className="flex flex-col items-center text-center">
-                {/* Icon Container */}
-                <div className="bg-white/20 p-4 rounded-full mb-4 group-hover:bg-white/30 transition-all duration-300">
-                  <social.icon className="text-white text-3xl" />
-                </div>
-                
-                {/* Platform Name */}
-                <h3 className={`text-xl font-bold mb-2 ${social.textColor}`}>
+              {/* Glow */}
+              <div
+                className={`absolute inset-0 rounded-2xl blur-xl opacity-0 
+          group-hover:opacity-60 transition duration-300 ${social.glow}`}
+              ></div>
+
+              {/* Card */}
+              <div
+                className="relative w-36 h-36 bg-white/10 backdrop-blur-xl 
+          border border-white/10 rounded-2xl 
+          flex flex-col items-center justify-center gap-3 
+          shadow-xl"
+              >
+                <social.icon className={`text-4xl ${social.iconColor}`} />
+
+                {/* Slide Label */}
+                <span
+                  className="absolute -bottom-10 opacity-0 group-hover:opacity-100 
+            group-hover:translate-y-2 transition duration-300 
+            text-sm text-white font-medium"
+                >
                   {social.name}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-white/80 text-sm mb-4">
-                  {social.name === 'GitHub' && 'Check out my projects and code'}
-                  {social.name === 'LinkedIn' && 'Professional network and resume'}
-                  {social.name === 'Twitter/X' && 'Latest updates and thoughts'}
-                  {social.name === 'Facebook' && 'Personal profile and updates'}
-                  {social.name === 'Instagram' && 'Photos and daily life'}
-                  {social.name === 'WhatsApp' && 'Direct message me'}
-                  {social.name === 'Email' && 'Send me an email'}
-                </p>
-                
-                {/* CTA Button */}
-                <div className="bg-white/20 px-4 py-2 rounded-full text-white text-sm font-medium group-hover:bg-white/30 transition-all duration-300">
-                  Visit {social.name}
-                </div>
+                </span>
               </div>
             </motion.a>
           ))}
         </motion.div>
 
-        {/* Quick Contact Section */}
-    
-
-        {/* Follow Me Text */}
+        {/* Footer Text */}
         <motion.div
-          className="text-center mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center mt-20"
         >
-          <p className="text-white/80 text-lg">
-            Don't forget to follow and connect with me on your favorite platforms!
+          <p className="text-gray-400 text-lg">
+            One click away from meaningful connections 🚀
           </p>
         </motion.div>
+
       </div>
+
     </section>
   );
 };

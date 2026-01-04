@@ -66,7 +66,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
+    <section id="contact" className=" px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
       <div className="container mx-auto max-w-4xl">
         {/* Title */}
         <motion.div
