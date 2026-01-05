@@ -171,7 +171,7 @@ const Hero = () => {
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.6 }}
                             >
-                                A passionate with experience in WordPress and Search Engine Optimization. I can expand your web presence and business using my works like customization, plugin integration and responsiveness. I also can help you on On-page SEO , Off-page SEO, Technical SEO and E-commerce SEO using my skills and expertise.
+                             I build fast, responsive WordPress websites with tailored themes and reliable plugin integration. Dedicated SEO services are available separately for businesses looking to improve search visibility and rankings.
                             </motion.p>
 
                             {/* Stats */}
