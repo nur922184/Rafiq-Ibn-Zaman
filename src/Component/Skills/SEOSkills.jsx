@@ -5,6 +5,7 @@ import {
   FaSearch,
   FaTools,
   FaPhp,
+  FaWordpress,
 } from "react-icons/fa";
 
 /* ================= COUNTER ================= */
@@ -46,11 +47,11 @@ const SEOSkills = () => {
       items: ["Backlinks", "Authority Growth", "Outreach"],
       icon: <FaSearch />,
     },
-    {
-      title: "SEO + PHP",
-      value: "70",
-      items: ["WP Hooks", "Custom SEO Logic", "Performance Tweaks"],
-      icon: <FaPhp />,
+   {
+      title: "E-commerce SEO",
+      value: 85,
+      items: ["Product Optimization", "Rich Snippets", "Cart & Checkout Performance"],
+      icon: <FaWordpress className="text-blue-600 text-2xl" />,
     },
   ];
 

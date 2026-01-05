@@ -68,8 +68,68 @@ const Works = () => {
         author: "Dr. Emily Rodriguez, Relationship Counselor"
       }
     },
-  ];
+    {
+      id: 4,
+      title: "Crowd Funding",
+      description: "CrowdFund is a platform where people can raise money for different projects, ideas, or causes by inviting others to contribute financially.",
+      detailedDescription: "CrowdFund is a comprehensive crowdfunding platform that allows creators to launch campaigns, share their stories, and receive financial support from backers. It includes payment processing, progress tracking, and social sharing features.",
+      liveDemo: "https://my-assignment-ten-57a0d.web.app/",
+      sourceCode: "https://github.com/nur922184/crowd-funding-client-10",
+      image: "https://i.ibb.co.com/m9RctdG/Screenshot-2024-12-20-233742.png",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
+      timeline: [
+        { date: "Dec 2024", event: "Initial planning and wireframing" },
+        { date: "Jan 2025", event: "Frontend development" },
+        { date: "Feb 2025", event: "Backend and payment integration" },
+        { date: "Mar 2025", event: "Security testing and deployment" }
+      ],
+      testimonial: {
+        text: "CrowdFund has enabled us to support countless creative projects that otherwise wouldn't have gotten off the ground. The platform is robust and user-friendly!",
+        author: "Alex Turner, Venture Capitalist"
+      }
+    },
+    {
+      id: 5,
+      title: "Marathon Management System",
+      description: "A complete system to manage marathon events, registrations, and participant dashboards.",
+      detailedDescription: "This platform allows users to explore upcoming marathons, view detailed event information, and register online. Admins can manage events, track registrations, and monitor participant activity through a secure dashboard.",
+      liveDemo: "https://assignment-eleven-8d2c2.web.app/",
+      sourceCode: "https://github.com/nur922184/marathon-management-system",
+      image: "https://i.ibb.co/BTDwwW2/1000-F-1099438564-a-VJ1le-Zxtyw-Ii-Wcm-Ld-QPGV9-Ze4-Ul-Ic-LO.jpg",
+      technologies: ["React", "Firebase", "Tailwind CSS", "Node.js", "MongoDB"],
+      timeline: [
+        { date: "Feb 2025", event: "Requirement analysis and planning" },
+        { date: "Mar 2025", event: "Frontend UI development" },
+        { date: "Apr 2025", event: "Backend integration" },
+        { date: "May 2025", event: "Testing and final deployment" }
+      ],
+      testimonial: {
+        text: "The Marathon Management System streamlined our event registrations and significantly reduced manual work. An excellent solution for large-scale events!",
+        author: "David Miller, Event Organizer"
+      }
+    },
+    {
+      id: 6,
+      title: "Resu-AI Resume Builder",
+      description: "An AI-powered platform to create, optimize, and customize professional resumes.",
+      detailedDescription: "Resu-AI helps users build ATS-friendly resumes using AI suggestions. It offers real-time editing, skill recommendations, and multiple templates tailored to different job roles.",
+      liveDemo: "https://assignment-eleven-8d2c2.web.app/",
+      sourceCode: "https://github.com/nur922184/life-link-client",
+      image: "https://consumersiteimages.trustpilot.net/business-units/672b2388cbb7f756eab35ee1-198x149-1x.jpg",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "Gemini AI"],
+      timeline: [
+        { date: "Jan 2025", event: "Idea validation and research" },
+        { date: "Feb 2025", event: "UI/UX design" },
+        { date: "Mar 2025", event: "AI integration and backend development" },
+        { date: "Apr 2025", event: "Testing, optimization, and launch" }
+      ],
+      testimonial: {
+        text: "Resu-AI made resume building incredibly simple and effective. The AI suggestions helped me land interviews faster!",
+        author: "Sophia Lee, Software Engineer"
+      }
+    }
 
+  ];
   const openModal = (project) => {
     setSelectedProject(project);
     setModalOpen(true);
@@ -83,7 +143,7 @@ const Works = () => {
   };
 
   const getTechIcon = (tech) => {
-    switch(tech) {
+    switch (tech) {
       case "React": return <SiReact className="text-blue-500" />;
       case "Node.js": return <SiNodedotjs className="text-green-600" />;
       case "MongoDB": return <SiMongodb className="text-green-700" />;
@@ -98,7 +158,7 @@ const Works = () => {
     <section id="my-works" className="py-16 px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e]">
       <div className="container mx-auto">
         {/* Title */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
