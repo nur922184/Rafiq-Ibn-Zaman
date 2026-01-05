@@ -1,124 +1,113 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaGoogle,
+  FaSearch,
+  FaTools,
+  FaPhp,
 } from "react-icons/fa";
 
+/* ================= COUNTER ================= */
+const Counter = ({ value }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = parseInt(value);
+    const interval = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === end) clearInterval(interval);
+    }, 15);
+
+    return () => clearInterval(interval);
+  }, [value]);
+
+  return <span>{count}%</span>;
+};
+
 const SEOSkills = () => {
-
-
-  const tools = [
-    { name: "Google Analytics", proficiency: "95%" },
-    { name: "SEMrush", proficiency: "90%" },
-    { name: "Google Search Console", proficiency: "92%" },
-    { name: "Ahrefs", proficiency: "85%" },
-    { name: "Screaming Frog", proficiency: "88%" },
-    { name: "Moz Pro", proficiency: "82%" },
-
+  const pillars = [
+    {
+      title: "On-Page SEO",
+      value: "95",
+      items: ["Keyword Research", "Content Optimization", "Internal Linking"],
+      icon: <FaSearch />,
+    },
+    {
+      title: "Technical SEO",
+      value: "90",
+      items: ["Core Web Vitals", "Indexing", "Site Speed"],
+      icon: <FaTools />,
+    },
+    {
+      title: "Off-Page SEO",
+      value: "85",
+      items: ["Backlinks", "Authority Growth", "Outreach"],
+      icon: <FaSearch />,
+    },
+    {
+      title: "SEO + PHP",
+      value: "70",
+      items: ["WP Hooks", "Custom SEO Logic", "Performance Tweaks"],
+      icon: <FaPhp />,
+    },
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
-
-  const progressVariants = {
-    hidden: { width: 0 },
-    visible: (width) => ({
-      width: width,
-      transition: {
-        duration: 1.5,
-        ease: "easeOut",
-        delay: 0.5
-      }
-    })
-  };
+  const tools = [
+    { name: "Google Analytics", level: 95 },
+    { name: "Search Console", level: 92 },
+    { name: "SEMrush", level: 90 },
+    { name: "Ahrefs", level: 85 },
+    { name: "Screaming Frog", level: 88 },
+  ];
 
   return (
-    <section id="seo-skills" className=" px-4 bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] min-h-screen flex items-center">
-      <div className="container mx-auto max-w-7xl py-20">
+    <section
+      id="seo-skills"
+      className="bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] mt-16 px-6 text-white"
+    >
+      <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
+        {/* HEADER */}
         <motion.div
-          initial={{ opacity: 0, y: -40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-20"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <h2 className="text-3xl md:text-4xl font-bold">
             SEO <span className="text-yellow-400">Expertise</span>
           </h2>
-          <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
-            Structured, scalable, and data-driven SEO strategies focused on long-term growth
+          <p className="text-gray-400 mt-3 text-sm max-w-xl mx-auto">
+            Data-driven SEO strategies focused on performance, scalability & growth
           </p>
         </motion.div>
 
-        {/* SEO Pillars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          {[
-            {
-              title: "On-Page SEO",
-              items: ["Keyword Research", "Content Optimization", "Internal Linking"],
-              value: "95%"
-            },
-            {
-              title: "Technical SEO",
-              items: ["Site Speed", "Core Web Vitals", "Indexing"],
-              value: "90%"
-            },
-            {
-              title: "Off-Page SEO",
-              items: ["Backlink Building", "Authority Growth", "Outreach"],
-              value: "85%"
-            },
-            {
-              title: "SEO Analytics",
-              items: ["GA4", "Search Console", "Conversion Tracking"],
-              value: "92%"
-            }
-          ].map((pillar, index) => (
+        {/* SEO PILLARS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          {pillars.map((pillar, i) => (
             <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="bg-gradient-to-b from-white/10 to-white/5 
-        backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-xl"
+              className="bg-white/5 border border-white/10 rounded-xl p-5 hover:border-yellow-400 transition"
             >
-
-              {/* Percentage */}
-              <div className="text-right text-yellow-400 font-bold text-2xl">
-                {pillar.value}
+              <div className="flex items-center justify-between mb-4">
+                <div className="text-yellow-400 text-xl">{pillar.icon}</div>
+                <div className="text-yellow-400 font-bold text-lg">
+                  <Counter value={pillar.value} />
+                </div>
               </div>
 
-              <h3 className="text-xl font-semibold text-white mb-4">
-                {pillar.title}
-              </h3>
+              <h3 className="text-lg font-semibold mb-3">{pillar.title}</h3>
 
-              <ul className="space-y-2 text-gray-300 text-sm">
-                {pillar.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-2">
-                    <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
+              <ul className="space-y-2 text-sm text-gray-300">
+                {pillar.items.map((item, idx) => (
+                  <li key={idx} className="flex gap-2 items-center">
+                    <span className="w-1.5 h-1.5 bg-yellow-400 rounded-full" />
                     {item}
                   </li>
                 ))}
@@ -127,35 +116,42 @@ const SEOSkills = () => {
           ))}
         </div>
 
-        {/* Impact Section */}
+        {/* SEO TOOLS */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          {[
-            { number: "50+", label: "Websites Ranked" },
-            { number: "3x", label: "Organic Growth" },
-            { number: "Top 10", label: "SERP Results" }
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/10 border border-white/10 rounded-xl p-8 text-center"
-            >
-              <div className="text-3xl font-bold text-yellow-400">
-                {stat.number}
+          <h3 className="text-2xl font-semibold mb-8 text-center text-yellow-400">
+            SEO Tools
+          </h3>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {tools.map((tool, i) => (
+              <div
+                key={i}
+                className="bg-white/5 border border-white/10 rounded-lg p-4"
+              >
+                <div className="flex justify-between text-sm mb-2">
+                  <span>{tool.name}</span>
+                  <span className="text-yellow-400">{tool.level}%</span>
+                </div>
+
+                <div className="w-full h-1.5 bg-gray-700 rounded-full">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${tool.level}%` }}
+                    transition={{ duration: 0.8 }}
+                    className="h-full bg-yellow-400 rounded-full"
+                  />
+                </div>
               </div>
-              <p className="text-gray-300 mt-2">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </motion.div>
 
       </div>
-
     </section>
   );
 };

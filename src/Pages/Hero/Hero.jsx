@@ -157,7 +157,7 @@ const Hero = () => {
                             </div>
 
                             <motion.h3
-                                className="text-2xl lg:text-3xl text-gray-300 font-medium mb-6"
+                                className="text-2xl lg:text-3xl text-gray-300 font-bold mb-6"
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ delay: 0.4 }}

@@ -15,9 +15,7 @@ const AboutMe = () => {
                         About Me
                     </h2>
                     <p className="text-gray-300 leading-relaxed">
-                        Hello! I’m Rafiq Ibn Zaman, a dedicated  Wordpress Develope & Basic SEO Expert with a strong focus on creating functional and visually appealing websites. From custom themes to plugin development, I deliver solutions that are secure, responsive, and tailored to client needs. My goal is to blend creativity with technical expertise
-                        <span className="text-teal-400 font-semibold"> to build web platforms that drive engagement and success. </span>
-                        I’m passionate about turning ideas into digital  <span className="text-teal-400 font-semibold">  experiences that truly make an impact.</span>
+                        I build responsive WordPress websites with custom themes and reliable plugin integration for small businesses. SEO services are available separately for clients who want focused search visibility improvement. My work is practical, transparent, and designed to support small businesses both online and behind the scenes. 
                     </p>
 
                     <div className="space-y-4">

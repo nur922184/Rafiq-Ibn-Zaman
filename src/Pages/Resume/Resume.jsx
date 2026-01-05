@@ -3,9 +3,8 @@ import { motion } from "framer-motion";
 import { FaDownload, FaEye, FaFilePdf, FaGoogleDrive } from "react-icons/fa";
 
 const Resume = () => {
-  const resumeLink = "https://drive.google.com/file/d/1SM_MDwZDoAgAVElhS-R34xymOgNIOT6h/view";
-  const downloadLink = "https://drive.google.com/uc?export=download&id=1SM_MDwZDoAgAVElhS-R34xymOgNIOT6h";
-
+  const resumeLink = "https://drive.google.com/file/d/1ZYVVdOKq2kHpUBAtkyzc_J6FY3TQyhAV/view";
+  const downloadLink = "https://drive.google.com/uc?export=download&id=1ZYVVdOKq2kHpUBAtkyzc_J6FY3TQyhAV";
 
 
   return (

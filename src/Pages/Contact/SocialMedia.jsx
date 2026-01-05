@@ -139,7 +139,7 @@ const SocialMedia = () => {
 
               {/* Card */}
               <div
-                className="relative w-36 h-36 bg-white/10 backdrop-blur-xl 
+                className="relative md:w-36 md:h-36 w-28 h-28 bg-white/10 backdrop-blur-xl 
           border border-white/10 rounded-2xl 
           flex flex-col items-center justify-center gap-3 
           shadow-xl"

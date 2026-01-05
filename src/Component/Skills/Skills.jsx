@@ -1,116 +1,164 @@
-import React from "react";
-import { 
-  FaHtml5, FaCss3Alt, FaJsSquare, FaReact,  
-  FaUsers, FaLightbulb, FaTasks, FaWordpress, FaSearch, FaShoppingCart, FaMobileAlt 
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaWordpress,
+  FaSearch,
+  FaShoppingCart,
+  FaPhp,
+  FaUsers,
+  FaTasks,
+  FaLightbulb,
 } from "react-icons/fa";
-
-import {  SiTailwindcss } from "react-icons/si";
 import SEOSkills from "./SEOSkills";
 
+/* ================= SKILLS DATA ================= */
 const skills = [
-  { name: "HTML5", level: 95, icon: <FaHtml5 className="text-orange-500 text-2xl" /> },
-  { name: "CSS3", level: 90, icon: <FaCss3Alt className="text-blue-500 text-2xl" /> },
-  { name: "JavaScript", level: 85, icon: <FaJsSquare className="text-yellow-400 text-2xl" /> },
-  { name: "React", level: 80, icon: <FaReact className="text-cyan-400 text-2xl" /> },
-  { name: "Tailwind CSS", level: 85, icon: <SiTailwindcss className="text-sky-400 text-2xl" /> },
+  { name: "HTML5", level: 95, category: "Frontend", icon: <FaHtml5 /> },
+  { name: "CSS3", level: 90, category: "Frontend", icon: <FaCss3Alt /> },
+  { name: "JavaScript", level: 85, category: "Frontend", icon: <FaJsSquare /> },
+  { name: "React", level: 80, category: "Frontend", icon: <FaReact /> },
 
-  // 🔹 WordPress Skills
-  { name: "WordPress Site Builder", level: 85, icon: <FaWordpress className="text-blue-600 text-2xl" /> },
-  { name: "Theme Customization", level: 80, icon: <FaWordpress className="text-blue-500 text-2xl" /> },
-  { name: "Plugin Integration", level: 80, icon: <FaWordpress className="text-blue-400 text-2xl" /> },
+  { name: "WP Site Builder", level: 85, category: "WordPress", icon: <FaWordpress /> },
+  { name: "Theme Customization", level: 80, category: "WordPress", icon: <FaWordpress /> },
+  { name: "Plugin Integration", level: 80, category: "WordPress", icon: <FaWordpress /> },
 
-  // 🔹 Responsive Design
-  { name: "Responsive Design", level: 90, icon: <FaMobileAlt className="text-purple-500 text-2xl" /> },
-
-  // 🔹 SEO Skills
-  { name: "On-page SEO", level: 85, icon: <FaSearch className="text-green-500 text-2xl" /> },
-  { name: "Off-page SEO", level: 75, icon: <FaSearch className="text-green-400 text-2xl" /> },
-  { name: "Technical SEO", level: 70, icon: <FaSearch className="text-green-600 text-2xl" /> },
-  { name: "E-commerce SEO", level: 75, icon: <FaShoppingCart className="text-orange-500 text-2xl" /> },
+  { name: "On-page SEO", level: 85, category: "SEO", icon: <FaSearch /> },
+  { name: "Off-page SEO", level: 75, category: "SEO", icon: <FaSearch /> },
+  { name: "Technical SEO", level: 70, category: "SEO", icon: <FaSearch /> },
+  { name: "E-commerce SEO", level: 75, category: "SEO", icon: <FaShoppingCart /> },
+  { name: "PHP (SEO & WP)", level: 65, category: "SEO", icon: <FaPhp /> },
 ];
 
 const softSkills = [
-  { name: "Teamwork", icon: <FaUsers className="text-indigo-500 text-xl" /> },
-  { name: "Leadership", icon: <FaTasks className="text-pink-500 text-xl" /> },
-  { name: "Problem Solving", icon: <FaLightbulb className="text-yellow-500 text-xl" /> },
+  { name: "Teamwork", icon: <FaUsers /> },
+  { name: "Leadership", icon: <FaTasks /> },
+  { name: "Problem Solving", icon: <FaLightbulb /> },
 ];
-// Key SEO strategist skills include keyword research, technical SEO, on-page and off-page optimization, data analysis, content creation, and proficiency with SEO tools like Google Analytics and SEMrush
 
+const categories = ["All", "Frontend", "WordPress", "SEO", "Soft Skills"];
+
+/* ================= COUNTER ================= */
+const Counter = ({ value }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let start = 0;
+    const end = value;
+    const duration = 800;
+    const stepTime = Math.max(Math.floor(duration / end), 20);
+
+    const timer = setInterval(() => {
+      start += 1;
+      setCount(start);
+      if (start === end) clearInterval(timer);
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [value]);
+
+  return <span>{count}%</span>;
+};
+
+/* ================= SKILL CARD ================= */
+const SkillCard = ({ skill }) => (
+  <motion.div
+    initial={{ opacity: 0, scale: 0.9 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.4 }}
+    viewport={{ once: true }}
+    className="bg-gray-900/70 border border-gray-700 rounded-xl p-4 
+      flex flex-col items-center text-center gap-3 
+      hover:border-teal-400 transition"
+  >
+    <div className="text-3xl text-teal-400">{skill.icon}</div>
+    <h4 className="text-sm font-semibold">{skill.name}</h4>
+
+    <div className="text-xs text-teal-300 font-medium">
+      <Counter value={skill.level} />
+    </div>
+
+    <div className="w-full h-1.5 bg-gray-700 rounded-full overflow-hidden">
+      <motion.div
+        initial={{ width: 0 }}
+        whileInView={{ width: `${skill.level}%` }}
+        transition={{ duration: 0.8 }}
+        className="h-full bg-teal-400"
+      />
+    </div>
+  </motion.div>
+);
+
+/* ================= MAIN ================= */
 const Skills = () => {
+  const [active, setActive] = useState("All");
+
+  const filteredSkills =
+    active === "All"
+      ? skills
+      : skills.filter((s) => s.category === active);
+
   return (
-    <section id="skills" className="bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] text-white  px-6 md:px-12">
-      <div className="container mx-auto py-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-teal-400 mb-14">
+    <section
+      id="skills"
+      className="bg-gradient-to-r from-[#6b6b83] via-[#536976] to-[#24243e] text-white py-20 px-6"
+    >
+      <div className="max-w-6xl mx-auto">
+
+        <h2 className="text-3xl font-bold text-center text-teal-400 mb-10">
           Skills & Expertise
         </h2>
 
-        {/* Technical Skills */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-semibold text-teal-300 mb-10 text-center">
-            Technical Skills
-          </h3>
-
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
-            {skills.map((skill, index) => (
-              <div
-                key={index}
-                className="relative bg-gray-900/60 backdrop-blur-lg border border-teal-500/20 rounded-2xl p-8 
-          hover:scale-105 hover:border-teal-400 transition duration-300 shadow-lg"
-              >
-                {/* Percentage Badge */}
-                <span className="absolute top-4 right-4 text-sm bg-teal-500/20 text-teal-400 px-3 py-1 rounded-full">
-                  {skill.level}%
-                </span>
-
-                <div className="flex flex-col items-center text-center gap-4">
-                  <div className="text-4xl text-teal-400">
-                    {skill.icon}
-                  </div>
-
-                  <h4 className="text-xl font-semibold">
-                    {skill.name}
-                  </h4>
-
-                  <div className="w-full h-2 bg-gray-700 rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-gradient-to-r from-teal-400 to-cyan-500"
-                      style={{ width: `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        {/* FILTER */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {categories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActive(cat)}
+              className={`px-4 py-1.5 text-sm rounded-full border transition
+                ${
+                  active === cat
+                    ? "bg-teal-400 text-gray-900 border-teal-400"
+                    : "border-teal-400 text-teal-300 hover:bg-teal-400 hover:text-gray-900"
+                }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
 
-        {/* SEO Skills */}
-        <SEOSkills />
+        {/* SKILLS */}
+        {active !== "Soft Skills" && (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-5">
+            {filteredSkills.map((skill, i) => (
+              <SkillCard key={i} skill={skill} />
+            ))}
+          </div>
+        )}
 
-        {/* Soft Skills */}
-        <div>
-          <h3 className="text-2xl font-semibold text-teal-300 mb-10 text-center">
-            Soft Skills
-          </h3>
-
+        {/* SOFT SKILLS */}
+        {active === "Soft Skills" && (
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {softSkills.map((soft, index) => (
-              <div
-                key={index}
-                className="group bg-gray-800/70 border border-gray-700 rounded-xl px-6 py-5 
-          flex items-center gap-4 hover:border-teal-400 hover:bg-gray-900 transition duration-300"
+            {softSkills.map((soft, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4 }}
+                className="bg-gray-900/70 border border-gray-700 rounded-xl px-6 py-4 
+                  flex items-center gap-4 hover:border-teal-400 transition"
               >
-                <div className="text-2xl text-teal-400 group-hover:scale-110 transition">
-                  {soft.icon}
-                </div>
-                <span className="text-lg font-medium">
-                  {soft.name}
-                </span>
-              </div>
+                <div className="text-2xl text-teal-400">{soft.icon}</div>
+                <span className="font-medium">{soft.name}</span>
+              </motion.div>
             ))}
           </div>
-        </div>
-      </div>
-
+        )}
+      </div> 
+      <SEOSkills></SEOSkills>
     </section>
   );
 };
