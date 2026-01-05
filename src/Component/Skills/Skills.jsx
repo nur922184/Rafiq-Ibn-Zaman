@@ -20,7 +20,7 @@ const skills = [
   { name: "HTML5", level: 95, category: "Frontend", icon: <FaHtml5 /> },
   { name: "CSS3", level: 90, category: "Frontend", icon: <FaCss3Alt /> },
   { name: "JavaScript", level: 85, category: "Frontend", icon: <FaJsSquare /> },
-  { name: "React", level: 80, category: "Frontend", icon: <FaReact /> },
+  { name: "PHP", level: 65, category: "SEO", icon: <FaPhp /> },
 
   { name: "WP Site Builder", level: 85, category: "WordPress", icon: <FaWordpress /> },
   { name: "Theme Customization", level: 80, category: "WordPress", icon: <FaWordpress /> },
@@ -30,7 +30,7 @@ const skills = [
   { name: "Off-page SEO", level: 75, category: "SEO", icon: <FaSearch /> },
   { name: "Technical SEO", level: 70, category: "SEO", icon: <FaSearch /> },
   { name: "E-commerce SEO", level: 75, category: "SEO", icon: <FaShoppingCart /> },
-  { name: "PHP (SEO & WP)", level: 65, category: "SEO", icon: <FaPhp /> },
+  
 ];
 
 const softSkills = [
